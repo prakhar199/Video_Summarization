@@ -22,13 +22,13 @@ json_path = args.json_path
 data_root = args.data_root
 save_dir = args.save_dir
 bar = args.bar
-video_dir = os.path.join(data_root, 'ydata-tvsum50-video', 'video')
-anno_path = os.path.join(data_root, 'ydata-tvsum50-data', 'data', 'ydata-tvsum50-anno.tsv')
+video_dir = os.path.join(data_root,'video')
+anno_path = os.path.join(data_root,'data', 'ydata-tvsum50-anno.tsv')
 f_data = h5py.File(h5_path)
 with open(json_path) as f:
     json_dict = json.load(f)
     ids = json_dict.keys()
-matlab_path = os.path.join(data_root,'ydata-tvsum50-matlab','matlab','ydata-tvsum50.mat')
+matlab_path = os.path.join(data_root,'matlab','ydata-tvsum50.mat')
 d = mat73.loadmat(matlab_path)
 map_dict={}
 for i in range(len(d['tvsum50']['video'])):
