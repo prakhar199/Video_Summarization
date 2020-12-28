@@ -45,6 +45,9 @@ class BuildModel():
 
         attn_layer = Attention(name="Attention_Layer")
         attn_out =  attn_layer([encoder_out, decoder_out])
+        
+        attn_layer = Attention(name="Attention_Layer")
+        attn_out =  attn_layer([encoder_out, decoder_out])
 
         decoder_concat_input = Concatenate(axis = -1, name = 'concat_layer')([decoder_out, attn_out])
 
