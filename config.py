@@ -8,7 +8,7 @@ class Config():
         self.save_dir = '/content/save_dir'
         self.score_dir = '/content/score_dir'
 
-        self.n_epochs = 5
+        self.n_epochs = 50
         self.batch_size = 5
 
         for a,b in kwargs.items():
